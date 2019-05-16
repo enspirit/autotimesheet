@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'rugged'
-#gem 'bmg'
+gem 'bmg', :github => "enspirit/bmg"
 
 group :development do
   gem 'path'

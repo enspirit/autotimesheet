@@ -27,6 +27,14 @@ module Autotimesheet
     alias :- :minus
     alias :sub :minus
 
+    def begin
+      @ranges.first && @ranges.first.begin
+    end
+
+    def end
+      @ranges.last && @ranges.last.end
+    end
+
     def empty?
       @ranges.empty? || @ranges.all?{|r| r.begin >= r.end }
     end
